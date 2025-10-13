@@ -1,0 +1,12 @@
+services:
+  etl_service:
+    container_name: etl_container
+    build:
+      context: .
+      dockerfile: tmp.dockerfile
+    volumes:
+      - ./:/usr/src/app
+    command: tail -f /dev/null
+    stdin_open: true
+    tty: true
+    restart: always
