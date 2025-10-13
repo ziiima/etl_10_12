@@ -11,6 +11,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
+COPY pyproject.toml .
+COPY uv.lock .
+
 RUN uv venv --clear && \
     . .venv/bin/activate && \
     uv sync --frozen
