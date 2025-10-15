@@ -1,0 +1,7 @@
+benefit:
+  target: dev
+  outputs:
+    dev:
+      path: /usr/src/app/db/dev.duckdb
+      threads: 1
+      type: duckdb

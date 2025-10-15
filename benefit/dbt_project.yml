@@ -31,6 +31,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   benefit:
-    # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
+
+
+vars:
+  csv_path: '/usr/src/app/benefit/data-source'
